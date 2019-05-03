@@ -46,13 +46,15 @@
             this.OpMultiply = new System.Windows.Forms.Button();
             this.OpDivide = new System.Windows.Forms.Button();
             this.OpClear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 21);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(14, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 20);
+            this.textBox1.Size = new System.Drawing.Size(309, 23);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -65,7 +67,7 @@
             this.Num7.TabIndex = 1;
             this.Num7.Text = "7";
             this.Num7.UseVisualStyleBackColor = true;
-            this.Num7.Click += new System.EventHandler(this.Num7_Click);
+            this.Num7.Click += new System.EventHandler(this.button_click);
             // 
             // Num6
             // 
@@ -76,7 +78,7 @@
             this.Num6.TabIndex = 2;
             this.Num6.Text = "6";
             this.Num6.UseVisualStyleBackColor = true;
-            this.Num6.Click += new System.EventHandler(this.Num6_Click);
+            this.Num6.Click += new System.EventHandler(this.button_click);
             // 
             // Num5
             // 
@@ -87,7 +89,7 @@
             this.Num5.TabIndex = 3;
             this.Num5.Text = "5";
             this.Num5.UseVisualStyleBackColor = true;
-            this.Num5.Click += new System.EventHandler(this.Num5_Click);
+            this.Num5.Click += new System.EventHandler(this.button_click);
             // 
             // Num4
             // 
@@ -98,7 +100,7 @@
             this.Num4.TabIndex = 4;
             this.Num4.Text = "4";
             this.Num4.UseVisualStyleBackColor = true;
-            this.Num4.Click += new System.EventHandler(this.Num4_Click);
+            this.Num4.Click += new System.EventHandler(this.button_click);
             // 
             // Num9
             // 
@@ -109,7 +111,7 @@
             this.Num9.TabIndex = 5;
             this.Num9.Text = "9";
             this.Num9.UseVisualStyleBackColor = true;
-            this.Num9.Click += new System.EventHandler(this.Num9_Click);
+            this.Num9.Click += new System.EventHandler(this.button_click);
             // 
             // Num8
             // 
@@ -120,7 +122,7 @@
             this.Num8.TabIndex = 6;
             this.Num8.Text = "8";
             this.Num8.UseVisualStyleBackColor = true;
-            this.Num8.Click += new System.EventHandler(this.Num8_Click);
+            this.Num8.Click += new System.EventHandler(this.button_click);
             // 
             // Num3
             // 
@@ -131,7 +133,7 @@
             this.Num3.TabIndex = 7;
             this.Num3.Text = "3";
             this.Num3.UseVisualStyleBackColor = true;
-            this.Num3.Click += new System.EventHandler(this.Num3_Click);
+            this.Num3.Click += new System.EventHandler(this.button_click);
             // 
             // Num2
             // 
@@ -142,7 +144,7 @@
             this.Num2.TabIndex = 8;
             this.Num2.Text = "2";
             this.Num2.UseVisualStyleBackColor = true;
-            this.Num2.Click += new System.EventHandler(this.Num2_Click);
+            this.Num2.Click += new System.EventHandler(this.button_click);
             // 
             // Num1
             // 
@@ -153,7 +155,7 @@
             this.Num1.TabIndex = 9;
             this.Num1.Text = "1";
             this.Num1.UseVisualStyleBackColor = true;
-            this.Num1.Click += new System.EventHandler(this.Num1_Click);
+            this.Num1.Click += new System.EventHandler(this.button_click);
             // 
             // OpEquals
             // 
@@ -175,18 +177,18 @@
             this.Num0.TabIndex = 11;
             this.Num0.Text = "0";
             this.Num0.UseVisualStyleBackColor = true;
-            this.Num0.Click += new System.EventHandler(this.Num0_Click);
+            this.Num0.Click += new System.EventHandler(this.button_click);
             // 
             // OpDecimal
             // 
             this.OpDecimal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpDecimal.Location = new System.Drawing.Point(12, 229);
+            this.OpDecimal.Location = new System.Drawing.Point(15, 229);
             this.OpDecimal.Name = "OpDecimal";
             this.OpDecimal.Size = new System.Drawing.Size(75, 54);
             this.OpDecimal.TabIndex = 12;
             this.OpDecimal.Text = ".";
             this.OpDecimal.UseVisualStyleBackColor = true;
-            this.OpDecimal.Click += new System.EventHandler(this.OpDecimal_Click);
+            this.OpDecimal.Click += new System.EventHandler(this.button_click);
             // 
             // OpPlus
             // 
@@ -197,7 +199,7 @@
             this.OpPlus.TabIndex = 13;
             this.OpPlus.Text = "+";
             this.OpPlus.UseVisualStyleBackColor = true;
-            this.OpPlus.Click += new System.EventHandler(this.OpPlus_Click);
+            this.OpPlus.Click += new System.EventHandler(this.operator_click);
             // 
             // OpMinus
             // 
@@ -208,7 +210,7 @@
             this.OpMinus.TabIndex = 14;
             this.OpMinus.Text = "-";
             this.OpMinus.UseVisualStyleBackColor = true;
-            this.OpMinus.Click += new System.EventHandler(this.OpMinus_Click);
+            this.OpMinus.Click += new System.EventHandler(this.operator_click);
             // 
             // OpMultiply
             // 
@@ -219,7 +221,7 @@
             this.OpMultiply.TabIndex = 15;
             this.OpMultiply.Text = "x";
             this.OpMultiply.UseVisualStyleBackColor = true;
-            this.OpMultiply.Click += new System.EventHandler(this.OpMultiply_Click);
+            this.OpMultiply.Click += new System.EventHandler(this.operator_click);
             // 
             // OpDivide
             // 
@@ -230,12 +232,12 @@
             this.OpDivide.TabIndex = 16;
             this.OpDivide.Text = "/";
             this.OpDivide.UseVisualStyleBackColor = true;
-            this.OpDivide.Click += new System.EventHandler(this.OpDivide_Click);
+            this.OpDivide.Click += new System.EventHandler(this.operator_click);
             // 
             // OpClear
             // 
             this.OpClear.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpClear.Location = new System.Drawing.Point(12, 289);
+            this.OpClear.Location = new System.Drawing.Point(10, 291);
             this.OpClear.Name = "OpClear";
             this.OpClear.Size = new System.Drawing.Size(311, 52);
             this.OpClear.TabIndex = 17;
@@ -243,11 +245,22 @@
             this.OpClear.UseVisualStyleBackColor = true;
             this.OpClear.Click += new System.EventHandler(this.OpClear_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(330, 355);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.OpClear);
             this.Controls.Add(this.OpDivide);
             this.Controls.Add(this.OpMultiply);
@@ -297,6 +310,7 @@
         private System.Windows.Forms.Button OpMultiply;
         private System.Windows.Forms.Button OpDivide;
         private System.Windows.Forms.Button OpClear;
+        private System.Windows.Forms.Label label1;
     }
 }
 

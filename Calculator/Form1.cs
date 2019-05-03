@@ -12,6 +12,9 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
+        Double result = 0;
+        String equation = " ";
+
         public Calculator()
         {
             InitializeComponent();
@@ -22,94 +25,109 @@ namespace Calculator
             
         }
 
-        private void Num1_Click(object sender, EventArgs e)
+        private void button_click(object sender, EventArgs e)
         {
-               textBox1.Text = textBox1.Text + "1";
-          
+            if (textBox1.Text == "0")
+                textBox1.Clear();
+            Button button = (Button)sender;
+            textBox1.Text = textBox1.Text + button.Text;
         }
 
-        private void Num2_Click(object sender, EventArgs e)
+        private void operator_click(object sender, EventArgs e)
         {
-               textBox1.Text = textBox1.Text + "2";
+            Button button = (Button)sender;
+            equation = button.Text;
+            result = Double.Parse(textBox1.Text);
         }
+        //    private void Num1_Click(object sender, EventArgs e)
+        //    {
+        //        textBox1.Text = textBox1.Text + "1";
+        //    }
 
-        private void Num3_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "3";
-        }
+        //    private void Num2_Click(object sender, EventArgs e)
+        //    {
+        //        textBox1.Text = textBox1.Text + "2";
+        //    }
 
-        private void Num4_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "4";
-        }
+        //private void Num3_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "3";
+        //}
 
-        private void Num5_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "5";
-        }
+        //private void Num4_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "4";
+        //}
 
-        private void Num6_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "6";
-        }
+        //private void Num5_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "5";
+        //}
 
-        private void Num7_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "7";
-        }
+        //private void Num6_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "6";
+        //}
 
-        private void Num8_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "8";
-        }
+        //private void Num7_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "7";
+        //}
 
-        private void Num9_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "9";
-        }
+        //private void Num8_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "8";
+        //}
 
-        private void Num0_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "0";
-        }
+        //private void Num9_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "9";
+        //}
+
+        //private void Num0_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "0";
+        //}
 
         private void OpEquals_Click(object sender, EventArgs e)
-        {
-                string equation = textBox1.Text;
-                //string result = new DataTable().ToString().Compute(equation, null);
-                //Not sure where to convert the DataTable object to string to get correct output to Calculator Form
-                //Compiler error when trying to call the Compute method
-                //textBox1.Text = result;
-        }
+    {
+        string equation = textBox1.Text;
+        //string result = new DataTable().ToString().Compute(equation, null);
+        //Not sure where to convert the DataTable object to string to get correct output to Calculator Form
+        //Compiler error when trying to call the Compute method
+        //textBox1.Text = result;
+    }
 
-        private void OpClear_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = " ";
-        }
+    private void OpClear_Click(object sender, EventArgs e)
+    {
+        textBox1.Text = " ";
+    }
 
-        private void OpPlus_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "+";
-        }
+        
 
-        private void OpMinus_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "-";
-        }
+        //private void OpPlus_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "+";
+        //}
 
-        private void OpMultiply_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "*";
-        }
+        //private void OpMinus_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "-";
+        //}
 
-        private void OpDivide_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + "/";
-        }
+        //private void OpMultiply_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "*";
+        //}
 
-        private void OpDecimal_Click(object sender, EventArgs e)
-        {
-                textBox1.Text = textBox1.Text + ".";
-        }
+        //private void OpDivide_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + "/";
+        //}
+
+        //private void OpDecimal_Click(object sender, EventArgs e)
+        //{
+        //    textBox1.Text = textBox1.Text + ".";
+        //}
     }
 }
