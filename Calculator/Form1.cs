@@ -76,10 +76,10 @@ namespace Calculator
         private void OpEquals_Click(object sender, EventArgs e)
         {
                 string equation = textBox1.Text;
-                string result = new DataTable().ToString(Compute(equation, null));
+                //string result = new DataTable().ToString().Compute(equation, null);
                 //Not sure where to convert the DataTable object to string to get correct output to Calculator Form
                 //Compiler error when trying to call the Compute method
-                textBox1.Text = result;
+                //textBox1.Text = result;
         }
 
         private void OpClear_Click(object sender, EventArgs e)

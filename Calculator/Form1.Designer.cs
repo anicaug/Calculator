@@ -247,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 359);
+            this.ClientSize = new System.Drawing.Size(330, 355);
             this.Controls.Add(this.OpClear);
             this.Controls.Add(this.OpDivide);
             this.Controls.Add(this.OpMultiply);
@@ -266,7 +266,10 @@
             this.Controls.Add(this.Num6);
             this.Controls.Add(this.Num7);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Calculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
