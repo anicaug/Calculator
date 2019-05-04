@@ -46,13 +46,13 @@
             this.OpMultiply = new System.Windows.Forms.Button();
             this.OpDivide = new System.Windows.Forms.Button();
             this.OpClear = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CurrentOperation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(14, 30);
+            this.textBox1.Location = new System.Drawing.Point(12, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(309, 23);
             this.textBox1.TabIndex = 0;
@@ -74,7 +74,7 @@
             this.Num6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Num6.Location = new System.Drawing.Point(172, 114);
             this.Num6.Name = "Num6";
-            this.Num6.Size = new System.Drawing.Size(75, 52);
+            this.Num6.Size = new System.Drawing.Size(77, 52);
             this.Num6.TabIndex = 2;
             this.Num6.Text = "6";
             this.Num6.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.Num3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Num3.Location = new System.Drawing.Point(172, 172);
             this.Num3.Name = "Num3";
-            this.Num3.Size = new System.Drawing.Size(75, 51);
+            this.Num3.Size = new System.Drawing.Size(77, 51);
             this.Num3.TabIndex = 7;
             this.Num3.Text = "3";
             this.Num3.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             // OpDecimal
             // 
             this.OpDecimal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpDecimal.Location = new System.Drawing.Point(15, 229);
+            this.OpDecimal.Location = new System.Drawing.Point(12, 229);
             this.OpDecimal.Name = "OpDecimal";
             this.OpDecimal.Size = new System.Drawing.Size(75, 54);
             this.OpDecimal.TabIndex = 12;
@@ -193,9 +193,9 @@
             // OpPlus
             // 
             this.OpPlus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpPlus.Location = new System.Drawing.Point(253, 229);
+            this.OpPlus.Location = new System.Drawing.Point(255, 229);
             this.OpPlus.Name = "OpPlus";
-            this.OpPlus.Size = new System.Drawing.Size(68, 54);
+            this.OpPlus.Size = new System.Drawing.Size(66, 54);
             this.OpPlus.TabIndex = 13;
             this.OpPlus.Text = "+";
             this.OpPlus.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.OpMinus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpMinus.Location = new System.Drawing.Point(255, 172);
             this.OpMinus.Name = "OpMinus";
-            this.OpMinus.Size = new System.Drawing.Size(70, 51);
+            this.OpMinus.Size = new System.Drawing.Size(66, 51);
             this.OpMinus.TabIndex = 14;
             this.OpMinus.Text = "-";
             this.OpMinus.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.OpMultiply.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpMultiply.Location = new System.Drawing.Point(255, 114);
             this.OpMultiply.Name = "OpMultiply";
-            this.OpMultiply.Size = new System.Drawing.Size(68, 52);
+            this.OpMultiply.Size = new System.Drawing.Size(66, 52);
             this.OpMultiply.TabIndex = 15;
             this.OpMultiply.Text = "x";
             this.OpMultiply.UseVisualStyleBackColor = true;
@@ -228,7 +228,7 @@
             this.OpDivide.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpDivide.Location = new System.Drawing.Point(255, 56);
             this.OpDivide.Name = "OpDivide";
-            this.OpDivide.Size = new System.Drawing.Size(68, 52);
+            this.OpDivide.Size = new System.Drawing.Size(66, 52);
             this.OpDivide.TabIndex = 16;
             this.OpDivide.Text = "/";
             this.OpDivide.UseVisualStyleBackColor = true;
@@ -237,30 +237,30 @@
             // OpClear
             // 
             this.OpClear.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpClear.Location = new System.Drawing.Point(10, 291);
+            this.OpClear.Location = new System.Drawing.Point(12, 289);
             this.OpClear.Name = "OpClear";
-            this.OpClear.Size = new System.Drawing.Size(311, 52);
+            this.OpClear.Size = new System.Drawing.Size(309, 52);
             this.OpClear.TabIndex = 17;
             this.OpClear.Text = "Clear";
             this.OpClear.UseVisualStyleBackColor = true;
             this.OpClear.Click += new System.EventHandler(this.OpClear_Click);
             // 
-            // label1
+            // CurrentOperation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
+            this.CurrentOperation.AutoSize = true;
+            this.CurrentOperation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentOperation.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.CurrentOperation.Location = new System.Drawing.Point(12, 9);
+            this.CurrentOperation.Name = "CurrentOperation";
+            this.CurrentOperation.Size = new System.Drawing.Size(0, 16);
+            this.CurrentOperation.TabIndex = 18;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(330, 355);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CurrentOperation);
             this.Controls.Add(this.OpClear);
             this.Controls.Add(this.OpDivide);
             this.Controls.Add(this.OpMultiply);
@@ -310,7 +310,7 @@
         private System.Windows.Forms.Button OpMultiply;
         private System.Windows.Forms.Button OpDivide;
         private System.Windows.Forms.Button OpClear;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CurrentOperation;
     }
 }
 
